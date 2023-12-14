@@ -1,0 +1,84 @@
+.notification {
+  --notification-background: #fff1f1;
+  --notification-color: #161616;
+
+  width: 560px;
+  background-color: transparent;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.16px;
+  color: var(--notification-color);
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  max-height: 48px;
+}
+
+.notification-title {
+  font-weight: 600;
+  padding: 13px 0;
+  margin-right: 2px;
+}
+
+.notification-subtitle {
+  font-weight: 400;
+}
+
+.notification-icon {
+  margin: 14px 16px 14px 0;
+  margin-bottom: 14px;
+}
+
+.notification-button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification-button svg path {
+  fill: var(--notification-color);
+}
+
+.notification-information {
+  --notification-background-blue: #edf5ff;
+
+  border: 1px solid #4589ff;
+  border-left: 3px solid #4589ff;
+  background-color: var(--notification-background-blue);
+}
+
+.notification-success {
+  --notification-background-green: #defbe6;
+
+  border: 1px solid #42be65;
+  border-left: 3px solid #42be65;
+  background-color: var(--notification-background-green);
+}
+
+.notification-warning {
+  --notification-background-yellow: #fff8e1;
+
+  border: 1px solid #f1c21b;
+  border-left: 3px solid #f1c21b;
+  background-color: var(--notification-background-yellow);
+}
+
+.notification-error {
+  --notification-background-danger: #fff1f1;
+
+  border: 1px solid #e74c3c;
+  border-left: 3px solid #e74c3c;
+  background-color: var(--notification-background-danger);
+}

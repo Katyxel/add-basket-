@@ -1,0 +1,334 @@
+@import '../css/fonts.css';
+@import '../css/normalize.css';
+@import '../css/variables.css';
+@import '../lib/swiper.css';
+@import '../css/buttons.css';
+@import '../css/sidebar.css';
+@import '../css/counter.css';
+@import '../css/basket.css';
+@import '../css/form.css';
+@import '../css/notification.css';
+
+body {
+  font-family: 'Messina Sans', sans-serif;
+  color: #18191f;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--body-color);
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+
+/* header */
+.header {
+  background-color: var(--body-color);
+  padding: 16px 0;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+  min-height: 80px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 24px;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  position: relative;
+}
+
+/* полоска снизу для навигации */
+.nav-link::after,
+.active::after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--nav-link-color);
+  inset-inline: 0;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+/* анимация линии при наведении на неактивную ссылку */
+.nav-link:hover::after {
+  transform: scaleX(1);
+  opacity: 0.65;
+}
+
+.nav-link:hover {
+  opacity: 0.65;
+}
+
+/* анимация линии при наведении на активную ссылку */
+.active::after {
+  background-color: var(--accent-color);
+  transform: scaleX(1);
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+.header-buttons {
+  width: 175px;
+}
+
+/* END header */
+
+main {
+  padding: 80px 0 68.8px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: -0.8px;
+  color: var(--title-color);
+  margin-bottom: 46px;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  width: 158px;
+  height: 2px;
+  display: inline-block;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+/* main slider */
+
+.slider {
+  padding-top: 24px;
+  padding-bottom: 84px;
+}
+
+.swiper-scrollbar-drag {
+  --swiper-scrollbar-drag-bg-color: var(--title-color);
+}
+
+/* main card */
+.main-card {
+  width: 240px;
+  margin-bottom: 40px;
+}
+
+.main-card:hover {
+  cursor: pointer;
+}
+
+.main-card .card-image {
+  position: relative;
+}
+
+.main-card .card-image::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  transition-duration: 0s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+.main-card:hover .card-image::after {
+  opacity: 0.1;
+}
+
+.main-card .card-image img {
+  vertical-align: middle;
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 240px;
+}
+
+.main-card .card-wishlist {
+  position: absolute;
+  z-index: 1;
+  bottom: 24px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.main-card .wishlist-rating {
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 123px;
+}
+
+.main-card .rating-img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-card .whishlist-heart {
+  display: inline-block;
+  vertical-align: middle;
+  fill: rgb(0 0 0 / 50%);
+  height: 24px;
+  width: 24px;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.main-card .heart-active {
+  fill: var(--accent-color);
+}
+
+.main-card .card-title {
+  font-weight: 600;
+  margin-top: 16px;
+  text-transform: none;
+  color: var(--title-color);
+}
+
+.main-card .card-subtitle {
+  font-weight: 400;
+  margin-top: 4px;
+  text-transform: capitalize;
+  color: var(--subtitle-color);
+}
+
+.main-card .price-prev {
+  text-decoration: line-through;
+  color: var(--subtitle-color);
+  font-weight: 600;
+  margin-top: 16px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.main-card .price-current {
+  font-weight: 600;
+  margin-top: 16px;
+  color: var(--accent-color);
+  display: inline-block;
+}
+
+/* products */
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* skeleton */
+.skeleton {
+  position: relative;
+}
+
+.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background-size: 200%; /* анимация плавности перехода градиента */
+  animation: skeleton 1s infinite reverse;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* footer */
+.footer {
+  padding: 22px 0;
+  background-color: var(--body-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+
+.footer-rights {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--title-color);
+}
+
+/* атомарные классы */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-48 {
+  padding: 48px 0;
+}

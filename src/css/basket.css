@@ -1,0 +1,83 @@
+.basket-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #ececec;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
+  min-width: 820px;
+  transition: transform 220ms;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transform: translateX(100%);
+}
+
+/* счетчик в корзине */
+.basket-count__info {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  font-size: 10px;
+  background: #3aa39f;
+  border-radius: 50%;
+  color: #fff;
+  padding: 4px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-container.show {
+  transform: translateX(0);
+}
+
+/* отдельная карточка */
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #000;
+  max-height: 300px;
+}
+
+.item-image {
+  width: 240px;
+}
+
+.item-image img {
+  max-width: 100%;
+  /* min-height: 240px; */
+  object-fit: cover;
+}
+
+.close-button {
+  background-color: transparent;
+  color: var(--negative-color);
+  padding: 8px;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  max-width: 100px;
+  font-size: 16px;
+  align-items: center;
+}
+
+.close-button img {
+  max-width: 100%;
+  width: 14px;
+  height: 14px;
+}
+
+.gap {
+  gap: 14px;
+}

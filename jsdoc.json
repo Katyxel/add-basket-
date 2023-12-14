@@ -1,0 +1,10 @@
+{
+  "source": {
+    "include": ["src/js"],
+    "exclude": ["node_modules", "dist", "build"]
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs"
+  }
+}

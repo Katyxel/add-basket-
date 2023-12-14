@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Armchair",
+      "category": "Chair",
+      "rating": "4.9",
+      "price": "50.2",
+      "imgSrc": "/images/help-image-1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Bed",
+      "category": "Bed",
+      "rating": "3.0",
+      "price": "102.10",
+      "imgSrc": "/images/help-image-2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Bench",
+      "category": "Bench",
+      "rating": "4.9",
+      "price": "15",
+      "imgSrc": "/images/help-image-3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Bed 2",
+      "category": "Bed 2",
+      "rating": "3.0",
+      "price": "102.10",
+      "imgSrc": "/images/help-image-4.jpg"
+    },
+    {
+      "id": "xoG9jbGt9JQHl-aRcJuq6",
+      "name": "d",
+      "category": "dd",
+      "rating": "d",
+      "price": "d",
+      "imgSrc": ""
+    }
+  ]
+}
